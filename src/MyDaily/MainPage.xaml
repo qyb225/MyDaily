@@ -8,6 +8,63 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Frame x:Name="TheFrame" Margin="42 0 0 0" />
+        <SplitView x:Name="MySplitView" 
+                   CompactPaneLength="42" 
+                   OpenPaneLength="180" 
+                   DisplayMode="CompactOverlay" 
+                   HorizontalAlignment="Left">
+            <SplitView.Pane>
+                <StackPanel>
+                    <Button x:Name="HumbugerButton" Width="42" FontFamily="Segoe MDL2 Assets" 
+                    Content="&#xE700;" FontSize="18" Click="HumbugerButton_Click"/>
+                    <ListBox x:Name="IconListBox" SelectionMode="Single" 
+                     SelectionChanged="IconListBox_SelectionChanged">
+                        <ListBoxItem x:Name="HomePage">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="18" Padding="0 3 0 0" Text="&#xE80F;"/>
+                                <TextBlock FontSize="16" Text="主页" Margin="22 0 0 0"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="SearchBar">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="18" Padding="0 3 0 0" Text="&#xE773;"/>
+                                <TextBlock FontSize="16" Text="常用查询" Margin="22 0 0 0"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="MoneyBar">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="18" Padding="0 3 0 0" Text="&#xE7BF;"/>
+                                <TextBlock FontSize="16" Text="消费统计" Margin="22 0 0 0"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="TimeBar">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="18" Padding="0 3 0 0" Text="&#xE823;"/>
+                                <TextBlock FontSize="16" Text="当日任务" Margin="22 0 0 0"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="ForgetBar">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="18" Padding="0 3 0 0" Text="&#xED28;"/>
+                                <TextBlock FontSize="16" Text="备忘日程" Margin="22 0 0 0"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="NoteBar">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="18" Padding="0 3 0 0" Text="&#xE70F;"/>
+                                <TextBlock FontSize="16" Text="笔记" Margin="22 0 0 0"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="DiaryBar">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="18" Padding="0 3 0 0" Text="&#xE755;"/>
+                                <TextBlock FontSize="16" Text="日记本" Margin="22 0 0 0"/>
+                            </StackPanel>
+                        </ListBoxItem>  
+                    </ListBox>
+                </StackPanel>
+            </SplitView.Pane>
+        </SplitView>
     </Grid>
 </Page>

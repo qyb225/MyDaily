@@ -23,5 +23,13 @@ namespace MyDaily {
         public MainPage() {
             this.InitializeComponent();
         }
+
+        private void HumbugerButton_Click(object sender, RoutedEventArgs e) {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void IconListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+
+        }
     }
 }
