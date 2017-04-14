@@ -2,12 +2,17 @@
 
 ## 计划内容：
 
-1. 查询快递，股票，天气等
-2. 记录每天的消费账单
-3. 番茄时钟
-4. 图表分析个人习惯
-5. 笔记功，备忘录以及提醒
-6. 推送知乎日报，新浪新闻等（可以逐步增加）文章
+1. 首页显示知乎日报文章
+2. 查询天气，股票，快递，翻译等
+3. 消费记录，分析消费，可设置每月上限
+4. 番茄时钟
+5. 备忘日程
+5. 笔记本
+6. 私密日记
+
+Demo:
+
+![](./image/Demo0.gif)
 
 ----
 
@@ -15,3 +20,7 @@
 
 http://www.cnblogs.com/xiaozhi_5638/p/5056217.html
 https://github.com/sherlockchou86/ZhiHuDaily.UWP/blob/master/ZhiHuDaily.UWP.Core/Https/ServiceURL.cs
+
+*有道翻译api*
+
+http://fanyi.youdao.com/openapi.do?keyfrom=MyDaily&key=1146739795&type=data&doctype=json&version=1.1&q={0} 0为要翻译的文本
