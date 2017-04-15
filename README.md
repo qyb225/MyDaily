@@ -10,9 +10,10 @@
 5. 笔记本
 6. 私密日记
 
-Demo:
 
-![](./image/Demo0.gif)
+### 首页Demo:
+
+![](./image/Demo1.gif)
 
 ----
 
