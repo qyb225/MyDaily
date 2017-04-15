@@ -1,0 +1,17 @@
+﻿<UserControl
+    x:Class="MyDaily.Pages.ZhiHu.UITemplates.StoryList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyDaily.Pages.ZhiHu.UITemplates"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:vmd="using:MyDaily.ViewModels"
+    xmlns:md="using:MyDaily.Models"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <RelativePanel Height="110" Padding="0 10 0 10" Margin="10 10 10 0" HorizontalAlignment="Stretch">
+        <TextBlock x:Name="articleTitle" HorizontalAlignment="Stretch" Margin="20 0 20 0" Text="{x:Bind StoriesItem.Title, Mode=OneWay}" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Top" RelativePanel.AlignRightWithPanel="True" RelativePanel.RightOf="articleImage" />
+        <Image x:Name="articleImage" Source="{x:Bind StoriesItem.Images[0]}" Stretch="UniformToFill" Height="90" Width="90" RelativePanel.AlignLeftWithPanel="True"/>
+    </RelativePanel>
+</UserControl>

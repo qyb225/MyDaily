@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="MyDaily.Pages.Search.Weather"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyDaily.Pages.Search"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="DarkSlateBlue">
+        <RelativePanel Margin="0 15 0 0">
+            <AutoSuggestBox x:Name="search" RelativePanel.AlignRightWithPanel="True" PlaceholderText="搜索城市" Opacity="0.7" Text="" Foreground="LightGray" Margin="0 5 20 0" Grid.Column="0" QueryIcon="Find" HorizontalAlignment="Right" Height="32" Width="150" QuerySubmitted="search_QuerySubmitted" VerticalAlignment="Center"  />
+            <TextBlock x:Name="City" MinWidth="64" RelativePanel.AlignLeftWithPanel="True" Margin="20 0 0 5" Text="" MinHeight="32" Height="Auto" HorizontalAlignment="Left" Foreground="White" FontSize="32"/>
+            <TextBlock x:Name="TodayDate" RelativePanel.Below="City" Text="" Margin="20 5 0 5" Foreground="White" FontSize="22"/>
+        </RelativePanel>
+
+        <Grid Margin="20 20 20 70">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="TodayImage" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Width="200" Height="200" />
+            <TextBlock x:Name="TodayText" Text="" Grid.Column="1" Grid.Row="0" Foreground="White" VerticalAlignment="Center" FontSize="36"/>
+            <TextBlock x:Name="TodayTemp" Text="" Grid.Column="1" Grid.Row="1" Foreground="White" VerticalAlignment="Center" FontSize="36"/>
+            <TextBlock x:Name="TodayWind" Text="" Grid.Column="1" Grid.Row="2" Foreground="White" VerticalAlignment="Center" FontSize="26"/>
+        </Grid>
+        <Line Stretch="Fill" Stroke="LightGray" Visibility="Visible" StrokeThickness="1" X1="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20 5 20 20"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="Next1" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image x:Name="Day1" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Width="80" Height="80" Margin="5"/>
+                <TextBlock x:Name="Text1" FontSize="18" Foreground="White" Grid.Column="1" Grid.Row="0"/>
+                <TextBlock x:Name="Temp1" FontSize="18" Foreground="White" Grid.Column="1" Grid.Row="1"/>
+                <TextBlock x:Name="Date1" FontSize="18"  Grid.Column="1" Foreground="White" Grid.Row="2"/>
+            </Grid>
+            <Grid x:Name="Next2" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image x:Name="Day2" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Width="80" Height="80" Margin="5"/>
+                <TextBlock x:Name="Text2" FontSize="18" Grid.Column="1" Foreground="White" Grid.Row="0"/>
+                <TextBlock x:Name="Temp2" FontSize="18" Grid.Column="1" Foreground="White" Grid.Row="1"/>
+                <TextBlock x:Name="Date2" FontSize="18" Grid.Column="1" Foreground="White" Grid.Row="2"/>
+            </Grid>
+        </Grid>
+    </StackPanel>
+</Page>

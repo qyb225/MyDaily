@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MyDaily.Pages;
+using MyDaily.Pages.ZhiHu;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -22,6 +24,7 @@ namespace MyDaily {
     public sealed partial class MainPage : Page {
         public MainPage() {
             this.InitializeComponent();
+            TheFrame.Navigate(typeof(ZhiHuHomePage));
         }
 
         private void HumbugerButton_Click(object sender, RoutedEventArgs e) {

@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{09a1f65d-d69c-4dc6-a8e3-14fa34a05c77}</ProjectGuid>
+    <ProjectGuid>{09A1F65D-D69C-4DC6-A8E3-14FA34A05C77}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MyDaily</RootNamespace>
@@ -16,9 +16,7 @@
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    
     <PackageCertificateKeyFile>MyDaily_TemporaryKey.pfx</PackageCertificateKeyFile>
-    
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -100,17 +98,60 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\StoriesItem.cs" />
+    <Compile Include="Pages\Search\Weather.xaml.cs">
+      <DependentUpon>Weather.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ZhiHu\UITemplates\StoryList.xaml.cs">
+      <DependentUpon>StoryList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ZhiHu\ZhiHuHomePage.xaml.cs">
+      <DependentUpon>ZhiHuHomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Procy\WeatherProcy\WeatherProcy.cs" />
+    <Compile Include="Procy\ZhiHuProcy\DailyPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\StoriesListViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    
     <None Include="MyDaily_TemporaryKey.pfx" />
-    
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Weather\0.png" />
+    <Content Include="Assets\Weather\1.png" />
+    <Content Include="Assets\Weather\10.png" />
+    <Content Include="Assets\Weather\11.png" />
+    <Content Include="Assets\Weather\12.png" />
+    <Content Include="Assets\Weather\13.png" />
+    <Content Include="Assets\Weather\14.png" />
+    <Content Include="Assets\Weather\15.png" />
+    <Content Include="Assets\Weather\16.png" />
+    <Content Include="Assets\Weather\17.png" />
+    <Content Include="Assets\Weather\18.png" />
+    <Content Include="Assets\Weather\19.png" />
+    <Content Include="Assets\Weather\2.png" />
+    <Content Include="Assets\Weather\20.png" />
+    <Content Include="Assets\Weather\21.png" />
+    <Content Include="Assets\Weather\22.png" />
+    <Content Include="Assets\Weather\23.png" />
+    <Content Include="Assets\Weather\24.png" />
+    <Content Include="Assets\Weather\25.png" />
+    <Content Include="Assets\Weather\26.png" />
+    <Content Include="Assets\Weather\27.png" />
+    <Content Include="Assets\Weather\28.png" />
+    <Content Include="Assets\Weather\29.png" />
+    <Content Include="Assets\Weather\3.png" />
+    <Content Include="Assets\Weather\30.png" />
+    <Content Include="Assets\Weather\31.png" />
+    <Content Include="Assets\Weather\4.png" />
+    <Content Include="Assets\Weather\5.png" />
+    <Content Include="Assets\Weather\6.png" />
+    <Content Include="Assets\Weather\7.png" />
+    <Content Include="Assets\Weather\8.png" />
+    <Content Include="Assets\Weather\9.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -129,12 +170,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pages\Search\Weather.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ZhiHu\UITemplates\StoryList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ZhiHu\ZhiHuHomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
-  
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
-
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
