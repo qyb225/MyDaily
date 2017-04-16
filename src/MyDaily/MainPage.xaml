@@ -8,8 +8,8 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Frame x:Name="TheFrame" Margin="42 0 0 0" />
-        <SplitView x:Name="MySplitView" 
+        <Frame x:Name="TheFrame" Margin="42 0 0 0"/>
+            <SplitView x:Name="MySplitView" 
                    CompactPaneLength="42" 
                    OpenPaneLength="180" 
                    DisplayMode="CompactOverlay" 
@@ -61,7 +61,13 @@
                                 <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="18" Padding="0 3 0 0" Text="&#xE755;"/>
                                 <TextBlock FontSize="16" Text="日记本" Margin="22 0 0 0"/>
                             </StackPanel>
-                        </ListBoxItem>  
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="ZhiHuBar">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontSize="18" Padding="0 0 0 2" Text="知"/>
+                                <TextBlock FontSize="16" Text="知乎日报" Margin="22 0 0 0"/>
+                            </StackPanel>
+                        </ListBoxItem>
                     </ListBox>
                 </StackPanel>
             </SplitView.Pane>

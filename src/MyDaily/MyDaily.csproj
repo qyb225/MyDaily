@@ -99,6 +99,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\StoriesItem.cs" />
+    <Compile Include="Pages\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Search\Weather.xaml.cs">
       <DependentUpon>Weather.xaml</DependentUpon>
     </Compile>
@@ -120,6 +123,14 @@
     <None Include="MyDaily_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\homepageDemo\forget.jpg" />
+    <Content Include="Assets\homepageDemo\money.jpg" />
+    <Content Include="Assets\homepageDemo\note.jpg" />
+    <Content Include="Assets\homepageDemo\tomato.jpg" />
+    <Content Include="Assets\homepageDemo\touzi.jpg" />
+    <Content Include="Assets\homepageDemo\translate.jpg" />
+    <Content Include="Assets\homepageDemo\weather.jpg" />
+    <Content Include="Assets\homepageDemo\zhihu.jpg" />
     <Content Include="Assets\Weather\0.png" />
     <Content Include="Assets\Weather\1.png" />
     <Content Include="Assets\Weather\10.png" />
@@ -169,6 +180,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Search\Weather.xaml">
       <SubType>Designer</SubType>

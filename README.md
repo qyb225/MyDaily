@@ -13,6 +13,11 @@
 
 ### 首页Demo:
 
+![](./image/Demo2.gif)
+
+
+### 知乎日报Demo:
+
 ![](./image/Demo1.gif)
 
 ----

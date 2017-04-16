@@ -24,7 +24,7 @@ namespace MyDaily {
     public sealed partial class MainPage : Page {
         public MainPage() {
             this.InitializeComponent();
-            TheFrame.Navigate(typeof(ZhiHuHomePage));
+            TheFrame.Navigate(typeof(HomePage));
         }
 
         private void HumbugerButton_Click(object sender, RoutedEventArgs e) {
@@ -32,7 +32,12 @@ namespace MyDaily {
         }
 
         private void IconListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) {
-
+            if (ZhiHuBar.IsSelected) {
+                TheFrame.Navigate(typeof(ZhiHuHomePage));
+            }
+            else if (HomePage.IsSelected) {
+                TheFrame.Navigate(typeof(HomePage));
+            }
         }
     }
 }
