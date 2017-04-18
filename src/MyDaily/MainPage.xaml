@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Frame x:Name="TheFrame" Margin="42 0 0 0"/>
-            <SplitView x:Name="MySplitView" 
+        <SplitView x:Name="MySplitView" 
                    CompactPaneLength="42" 
                    OpenPaneLength="180" 
                    DisplayMode="CompactOverlay" 

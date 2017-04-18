@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using MyDaily.Pages;
 using MyDaily.Pages.ZhiHu;
+using MyDaily.Pages.Note;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -37,6 +38,12 @@ namespace MyDaily {
             }
             else if (HomePage.IsSelected) {
                 TheFrame.Navigate(typeof(HomePage));
+            }
+            else if (SearchBar.IsSelected) {
+                TheFrame.Navigate(typeof(SearchPage));
+            }
+            else if (NoteBar.IsSelected) {
+                TheFrame.Navigate(typeof(NotePage));
             }
         }
     }

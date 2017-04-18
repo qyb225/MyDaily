@@ -95,12 +95,26 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Database\NoteDatabase.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\NoteItem.cs" />
     <Compile Include="Models\StoriesItem.cs" />
     <Compile Include="Pages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Note\NotePage.xaml.cs">
+      <DependentUpon>NotePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Note\UITemplates\NoteList.xaml.cs">
+      <DependentUpon>NoteList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Search\Translate.xaml.cs">
+      <DependentUpon>Translate.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Search\Weather.xaml.cs">
       <DependentUpon>Weather.xaml</DependentUpon>
@@ -111,9 +125,11 @@
     <Compile Include="Pages\ZhiHu\ZhiHuHomePage.xaml.cs">
       <DependentUpon>ZhiHuHomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Procy\TranslateProcy\TranslateProcy.cs" />
     <Compile Include="Procy\WeatherProcy\WeatherProcy.cs" />
     <Compile Include="Procy\ZhiHuProcy\DailyPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\NoteListViewModels.cs" />
     <Compile Include="ViewModels\StoriesListViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +201,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Note\NotePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Note\UITemplates\NoteList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SearchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Search\Translate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Search\Weather.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -197,6 +229,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="SQLite.UWP.2015, Version=3.18.0">
+      <Name>SQLite for Universal Windows Platform</Name>
+    </SDKReference>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

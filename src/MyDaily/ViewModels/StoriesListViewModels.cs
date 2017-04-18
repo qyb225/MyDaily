@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using MyDaily.Procy.ZhiHuProcy;
 
 namespace MyDaily.ViewModels {
-    class StoriesListViewModels : INotifyPropertyChanged {
+    public class StoriesListViewModels : INotifyPropertyChanged {
         private ObservableCollection<Models.StoriesItem> allItems = new ObservableCollection<Models.StoriesItem>();
         public ObservableCollection<Models.StoriesItem> AllItems {
             get { return this.allItems; }

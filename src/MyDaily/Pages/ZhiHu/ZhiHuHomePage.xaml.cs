@@ -23,7 +23,7 @@ namespace MyDaily.Pages.ZhiHu {
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class ZhiHuHomePage : Page {
-        ViewModels.StoriesListViewModels ViewModels { get; set; }
+        public ViewModels.StoriesListViewModels ViewModels { get; set; }
         private int topId = 0;
         private int topTotal = 0;
         RootObject Article;
