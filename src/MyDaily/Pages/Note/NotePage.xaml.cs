@@ -27,17 +27,17 @@ namespace MyDaily.Pages.Note {
         }
 
         private void AddAppBarButton_Click(object sender, RoutedEventArgs e) {
-            ViewModels.AddNoteItem("明天你好", "123456");
-        }
-
-        private void DeleteButton_Click(object sender, RoutedEventArgs e) { 
-            if (ViewModels.SelectedItem != null) {
-                ViewModels.RemoveNoteItem(ViewModels.SelectedItem);
-            }
+            ViewModels.SelectedItem = null;
+            this.Frame.Navigate(typeof(EditPage), ViewModels);
         }
 
         private void NoteItem_ItemClicked(object sender, ItemClickEventArgs e) {
             ViewModels.SelectedItem = (Models.NoteItem)(e.ClickedItem);
+            this.Frame.Navigate(typeof(EditPage), ViewModels);
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e) {
+            this.ViewModels.SelectedItem = null;
         }
     }
 }

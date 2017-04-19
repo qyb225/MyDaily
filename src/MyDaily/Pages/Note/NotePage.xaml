@@ -12,7 +12,6 @@
 
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton x:Name="DeleteAppBarButton" Icon="Delete" Label="Delete" Click="DeleteButton_Click"/>
             <AppBarButton x:Name="AddAppBarButton" Icon="Add" Label="Add" Click="AddAppBarButton_Click"/>
         </CommandBar>
     </Page.BottomAppBar>

@@ -104,6 +104,9 @@
     <Compile Include="Pages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Note\EditPage.xaml.cs">
+      <DependentUpon>EditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Note\NotePage.xaml.cs">
       <DependentUpon>NotePage.xaml</DependentUpon>
     </Compile>
@@ -198,6 +201,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Note\EditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

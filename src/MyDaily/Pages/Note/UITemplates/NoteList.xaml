@@ -12,7 +12,7 @@
     <RelativePanel Height="240" Width="175">
         <Rectangle x:Name="NotePanel" Fill="LightGoldenrodYellow" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True"
                    RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True"/>
-        <TextBlock x:Name="Title" Text="{x:Bind NoteItem.Title, Mode=TwoWay}" RelativePanel.AlignLeftWith="NotePanel" RelativePanel.AlignRightWith="NotePanel"
-                   Padding="20" FontSize="18"/>
+        <TextBlock x:Name="Title" Text="{x:Bind NoteItem.Title, Mode=TwoWay}" TextWrapping="WrapWholeWords" RelativePanel.AlignLeftWith="NotePanel" RelativePanel.AlignRightWith="NotePanel"
+                   Margin="20" FontSize="18"/>
     </RelativePanel>
 </UserControl>

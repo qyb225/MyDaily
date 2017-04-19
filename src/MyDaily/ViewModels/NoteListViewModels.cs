@@ -44,6 +44,15 @@ namespace MyDaily.ViewModels {
             NotifyPropertyChanged();
         }
 
+        public void AddNoteItem(Models.NoteItem x) {
+            this.allItems.Add(x);
+            using (var conn = NoteDatabase.GetDbConnection()) {
+                var Database = conn.Table<Models.NoteItem>();
+                conn.Insert(x);
+            }
+            NotifyPropertyChanged();
+        }
+
         public void Update(Models.NoteItem x) {
             using (var conn = NoteDatabase.GetDbConnection()) {
                 var Database = conn.Table<Models.NoteItem>();
